@@ -13,4 +13,10 @@ plugins {
 }
 
 rootProject.name = "jmeter-cloud"
-include("jmeter-cloud-app", "jmeter-cloud-api", "jmeter-cloud-core", "jmeter-cloud-utilities")
+include(
+    "jmeter-cloud-app",
+    "jmeter-cloud-api",
+    "jmeter-cloud-rest-server",
+    "jmeter-cloud-core",
+    "jmeter-cloud-utilities"
+)
