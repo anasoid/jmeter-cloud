@@ -1,0 +1,66 @@
+openapi: 3.0.3
+info:
+  title: jmeter cloud client
+  description: This is a sample description about this spec.
+  termsOfService: ''
+  contact:
+    email: ''
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 0.1.0
+externalDocs:
+  description: Find out more about spec
+  url: ''
+servers:
+  - url: /v1
+    description: ''
+tags:
+  - name: node
+    description: ''
+  - name: cluster
+    description: ''
+    externalDocs:
+      description: ''
+      url: ''
+paths:
+  /node/status:
+    get:
+      summary: get node status
+      description: get  node status
+      operationId: getNodeStatus
+      tags:
+        - node
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NodeStatus'
+          description: success reponse
+  /cluster/status:
+    get:
+      summary: get cluster status
+      description: get cluster status
+      operationId: getClusterStatus
+      tags:
+        - cluster
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ClusterStatus'
+          description: success reponse
+components:
+  schemas:
+    NodeStatus: &ref_0
+      type: string
+      description: status
+      enum:
+        - running
+        - free
+    ClusterStatus: *ref_0
+  securitySchemes: {}
