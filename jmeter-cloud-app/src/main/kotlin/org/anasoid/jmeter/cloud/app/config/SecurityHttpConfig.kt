@@ -28,8 +28,8 @@ open class SecurityHttpConfig {
 
     @Bean
     fun userDetailsService(): ReactiveUserDetailsService {
-        val userDetails = User.withDefaultPasswordEncoder()
-            .username("user")
+        val userDetails = User
+            .withUsername("user")
             .password("password")
             .roles("USER")
             .build()
