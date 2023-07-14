@@ -34,6 +34,9 @@ dependencies {
     api(project(":jmeter-cloud-common-rest"))
 
 
+    //Spring boot
+    implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("org.springframework.boot:spring-boot-starter-webflux")
     //Spring swagger
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlin:kotlin-reflect")

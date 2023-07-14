@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("org.springframework.boot") version "3.1.1"
     id("io.spring.dependency-management") version "1.1.0"
-     //kotlin("jvm") version "1.8.22"
+    //kotlin("jvm") version "1.8.22"
     kotlin("plugin.spring") version "1.8.22"
 
     id("org.anasoid.jmeter.cloud.kotlin-boot-conventions")
@@ -27,6 +27,8 @@ dependencies {
 
     implementation(project(":jmeter-cloud-core"))
     implementation(project(":jmeter-cloud-api"))
+    implementation(project(":jmeter-cloud-public-rest"))
+    implementation(project(":jmeter-cloud-cluster-rest"))
     implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
