@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   title: jmeter cloud client
-  description: This is a sample description about this spec.
+  description: jmeter cloud client
   termsOfService: ''
   contact:
     email: ''
@@ -13,7 +13,7 @@ externalDocs:
   description: Find out more about spec
   url: ''
 servers:
-  - url: /v1
+  - url: /app
     description: ''
 tags:
   - name: node

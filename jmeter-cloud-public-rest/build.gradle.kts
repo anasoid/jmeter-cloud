@@ -1,4 +1,5 @@
 import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.openapitools.generator.gradle.plugin.tasks.GenerateTask
 
 plugins {
@@ -71,5 +72,10 @@ tasks.register<GenerateTask>("openApiGenerateApiPublic") {
     )
 
 }
+
+tasks.withType<KotlinCompile>().configureEach {
+    dependsOn("openApiGenerateApiPublic")
+}
+
 
 

@@ -2,6 +2,8 @@ package org.anasoid.jmeter.cloud.app.config
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.security.authentication.UserDetailsRepositoryReactiveAuthenticationManager
+import org.springframework.security.config.Customizer
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity
 import org.springframework.security.config.web.server.ServerHttpSecurity
 import org.springframework.security.core.userdetails.MapReactiveUserDetailsService
@@ -18,19 +20,19 @@ open class SecurityHttpConfig {
 
     @Bean
     fun filterChainSecurityApp(http: ServerHttpSecurity): SecurityWebFilterChain {
-        http.securityMatcher(PathPatternParserServerWebExchangeMatcher("/app"))
-            .authorizeExchange { authorize -> authorize.pathMatchers("/css/**").permitAll() }
+        http.securityMatcher(PathPatternParserServerWebExchangeMatcher("/app/**"))
+            .authorizeExchange { authorize -> authorize.pathMatchers("/app/css/**").permitAll() }
             .authorizeExchange { authorize -> authorize.pathMatchers("/user/**").permitAll() }
-            .formLogin { formLogin -> formLogin.loginPage("/log-in") }
+            .httpBasic(Customizer.withDefaults())
+            .authenticationManager(UserDetailsRepositoryReactiveAuthenticationManager(userDetailsService()))
         return http.build()
     }
 
 
-    @Bean
-    fun userDetailsService(): ReactiveUserDetailsService {
+    private fun userDetailsService(): ReactiveUserDetailsService {
         val userDetails = User
             .withUsername("user")
-            .password("password")
+            .password("pass")
             .roles("USER")
             .build()
         return MapReactiveUserDetailsService(userDetails)
