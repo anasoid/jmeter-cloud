@@ -1,6 +1,6 @@
 package org.anasoid.jmeter.cloud.app.config
 
-import org.anasoid.jmeter.cloud.public.rest.config.PackageScanConfig
+import org.anasoid.jmeter.cloud.api.rest.config.PackageScanConfig
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Import
 

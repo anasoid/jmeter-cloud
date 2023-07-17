@@ -17,7 +17,7 @@ include(
     "jmeter-cloud-app",
     "jmeter-cloud-api",
     "jmeter-cloud-cluster-rest",
-    "jmeter-cloud-public-rest",
+    "jmeter-cloud-api-rest",
     "jmeter-cloud-core",
     "jmeter-cloud-common-rest",
     "jmeter-cloud-utilities"

@@ -55,16 +55,16 @@ dependencies {
 
 
 
-tasks.register<GenerateTask>("openApiGenerateApiPublic") {
+tasks.register<GenerateTask>("openApiGenerateApiApp") {
     description = "open api generate client"
     group = "generate openapi"
     generatorName.set("kotlin-spring")
     inputSpec.set("$rootDir/jmeter-cloud-api/src/main/resources/openapi/jmeter-cloud-api-0.1.0.yml")
     outputDir.set("$buildDir/gensrc")
-    packageName.set("org.anasoid.jmeter.cloud.public.rest.generated")
+    packageName.set("org.anasoid.jmeter.cloud.api.rest.generated")
     configOptions.set(
         mapOf(
-            "basePackage" to "org.anasoid.jmeter.cloud.public.rest.generated.app",
+            "basePackage" to "org.anasoid.jmeter.cloud.api.rest.generated.app",
             "delegatePattern" to "true",
             "reactive" to "true",
             "useSpringBoot3" to "true",
@@ -74,7 +74,7 @@ tasks.register<GenerateTask>("openApiGenerateApiPublic") {
 }
 
 tasks.withType<KotlinCompile>().configureEach {
-    dependsOn("openApiGenerateApiPublic")
+    dependsOn("openApiGenerateApiApp")
 }
 
 
