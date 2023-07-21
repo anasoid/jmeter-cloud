@@ -1,0 +1,9 @@
+openapi:
+  jmeterCloudClient:
+    base-path: /app
+
+jmeter:
+  cloud:
+    module:
+        api:
+          mapping : ${openapi.jmeterCloudClient.base-path}

@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController()
-@RequestMapping("/app")
+@RequestMapping("\${openapi.jmeterCloudClient.base-path:/app}")
 class PublicHomeController {
 
 
