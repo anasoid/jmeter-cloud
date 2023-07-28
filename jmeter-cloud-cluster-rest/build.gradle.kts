@@ -16,6 +16,8 @@ plugins {
 
 }
 
+apply(plugin = "convention.detekt-config")
+
 apply(plugin = "io.spring.dependency-management")
 the<DependencyManagementExtension>().apply {
     imports {

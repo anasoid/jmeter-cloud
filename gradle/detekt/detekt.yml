@@ -1,0 +1,31 @@
+config:
+  warningsAsErrors: true
+
+
+comments:
+  active: true
+  AbsentOrWrongFileLicense:
+    active: true
+    excludes: [ '**/**.gradle.kts']
+  UndocumentedPublicClass:
+    active: true
+  UndocumentedPublicFunction:
+    active: true
+  UndocumentedPublicProperty:
+    active: true
+  CommentOverPrivateFunction:
+    active: false
+  CommentOverPrivateProperty:
+    active: false
+  DeprecatedBlockTag:
+    active: true
+  OutdatedDocumentation:
+    active: true
+    allowParamOnConstructorProperties: false
+
+style:
+  NewLineAtEndOfFile:
+    active: false
+formatting:
+  FinalNewline:
+    active: true

@@ -16,6 +16,8 @@ plugins {
 
 }
 
+apply(plugin = "convention.detekt-config")
+
 apply(plugin = "io.spring.dependency-management")
 the<DependencyManagementExtension>().apply {
     imports {
@@ -26,6 +28,7 @@ the<DependencyManagementExtension>().apply {
 sourceSets.named("main") {
     java.srcDir("$buildDir/gensrc/src/main/kotlin")
 }
+
 
 
 
@@ -46,7 +49,6 @@ dependencies {
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("jakarta.validation:jakarta.validation-api")
-
 
 
 }
