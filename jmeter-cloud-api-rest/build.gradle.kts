@@ -8,7 +8,6 @@ plugins {
     id("convention.kotlin.boot")
     alias(libs.plugins.openapi.generaor)
 
-
     // spring
     alias(libs.plugins.spring.boot) apply false
     alias(libs.plugins.spring.dependency)
@@ -37,25 +36,13 @@ dependencies {
     api(project(":jmeter-cloud-api"))
     api(project(":jmeter-cloud-common-rest"))
 
-
     // Spring boot
-    implementation("org.springframework.boot:spring-boot-starter-security")
-    implementation("org.springframework.boot:spring-boot-starter-webflux")
-    // Spring swagger
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("org.springframework.boot:spring-boot-starter-webflux")
-    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml")
-    implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-    implementation("jakarta.validation:jakarta.validation-api")
+
+
+
 
 
 }
-
-
-
-
 
 tasks.register<GenerateTask>("openApiGenerateApiApp") {
     description = "open api generate client"

@@ -7,5 +7,16 @@ plugins {
     id("convention.kotlin.common")
 
     // Apply the application plugin to add support for building a CLI application in Java.
+}
+
+dependencies {
+    // Spring boot
+    implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("org.springframework.boot:spring-boot-starter-webflux")
+
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("io.projectreactor:reactor-test")
+    testImplementation("org.springframework.security:spring-security-test")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
 }

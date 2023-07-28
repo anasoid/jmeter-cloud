@@ -1,0 +1,9 @@
+spring:
+  config:
+    import: "classpath:/config/client-server.yml"
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
