@@ -3,7 +3,7 @@
  */
 
 plugins {
-    id("org.anasoid.jmeter.cloud.kotlin-library-conventions")
+    id("convention.kotlin.library")
 }
 
 dependencies {

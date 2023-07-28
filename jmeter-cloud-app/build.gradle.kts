@@ -2,13 +2,10 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 
 plugins {
-    id("org.springframework.boot") version "3.1.1"
-    id("io.spring.dependency-management") version "1.1.0"
-    //kotlin("jvm") version "1.8.22"
-    kotlin("plugin.spring") version "1.8.22"
-
-    id("org.anasoid.jmeter.cloud.kotlin-boot-conventions")
-
+    alias(libs.plugins.spring.boot)
+    alias(libs.plugins.spring.dependency)
+    kotlin("plugin.spring") version libs.versions.kotlin.get()
+    id("convention.kotlin.boot")
 }
 
 
@@ -22,6 +19,8 @@ java {
 repositories {
     mavenCentral()
 }
+
+apply(plugin = "convention.detekt-config")
 
 dependencies {
 

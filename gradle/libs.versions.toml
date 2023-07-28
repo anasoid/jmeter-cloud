@@ -1,0 +1,19 @@
+[versions]
+detekt = "1.23.0"
+kotlin = "1.8.22"
+detektkotlin = "1.8.21"
+openapi = "6.6.0"
+spring-boot = "3.1.1"
+spring-dependency = "1.1.0"
+
+[libraries]
+detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+plugin-detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+
+[plugins]
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+openapi-generaor = { id = "org.openapi.generator", version.ref = "openapi" }
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+spring-dependency = { id = "io.spring.dependency-management", version.ref = "spring-dependency" }

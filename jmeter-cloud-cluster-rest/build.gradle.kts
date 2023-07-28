@@ -3,18 +3,19 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.openapitools.generator.gradle.plugin.tasks.GenerateTask
 
 plugins {
-    id("org.anasoid.jmeter.cloud.kotlin-library-conventions")
-    id("org.anasoid.jmeter.cloud.kotlin-openapi-generated-conventions")
-    id("org.anasoid.jmeter.cloud.kotlin-boot-conventions")
-    id("org.openapi.generator") version "6.6.0"
+    id("convention.kotlin.library")
+    id("convention.openapi.generate")
+    id("convention.kotlin.boot")
+    alias(libs.plugins.openapi.generaor)
 
-
-    //spring
-    id("org.springframework.boot") version "3.1.1" apply false
-    id("io.spring.dependency-management") version "1.1.0"
-    kotlin("plugin.spring") version "1.8.22"
+    // spring
+    alias(libs.plugins.spring.boot) apply false
+    alias(libs.plugins.spring.dependency)
+    kotlin("plugin.spring") version libs.versions.kotlin.get()
 
 }
+
+apply(plugin = "convention.detekt-config")
 
 apply(plugin = "io.spring.dependency-management")
 the<DependencyManagementExtension>().apply {

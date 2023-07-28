@@ -3,18 +3,20 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.openapitools.generator.gradle.plugin.tasks.GenerateTask
 
 plugins {
-    id("org.anasoid.jmeter.cloud.kotlin-library-conventions")
-    id("org.anasoid.jmeter.cloud.kotlin-openapi-generated-conventions")
-    id("org.anasoid.jmeter.cloud.kotlin-boot-conventions")
-    id("org.openapi.generator") version "6.6.0"
+    id("convention.kotlin.library")
+    id("convention.openapi.generate")
+    id("convention.kotlin.boot")
+    alias(libs.plugins.openapi.generaor)
 
 
-    //spring
-    id("org.springframework.boot") version "3.1.1" apply false
-    id("io.spring.dependency-management") version "1.1.0"
-    kotlin("plugin.spring") version "1.8.22"
+    // spring
+    alias(libs.plugins.spring.boot) apply false
+    alias(libs.plugins.spring.dependency)
+    kotlin("plugin.spring") version libs.versions.kotlin.get()
 
 }
+
+apply(plugin = "convention.detekt-config")
 
 apply(plugin = "io.spring.dependency-management")
 the<DependencyManagementExtension>().apply {
@@ -29,16 +31,17 @@ sourceSets.named("main") {
 
 
 
+
 dependencies {
     api(project(":jmeter-cloud-core"))
     api(project(":jmeter-cloud-api"))
     api(project(":jmeter-cloud-common-rest"))
 
 
-    //Spring boot
+    // Spring boot
     implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
-    //Spring swagger
+    // Spring swagger
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
@@ -46,7 +49,6 @@ dependencies {
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("jakarta.validation:jakarta.validation-api")
-
 
 
 }
