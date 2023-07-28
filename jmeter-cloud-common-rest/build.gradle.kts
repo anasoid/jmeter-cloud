@@ -5,8 +5,8 @@ import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
  */
 
 plugins {
-    id("org.anasoid.jmeter.cloud.kotlin-library-conventions")
-    id("org.anasoid.jmeter.cloud.kotlin-boot-conventions")
+    id("convention.kotlin.library")
+    id("convention.kotlin.boot")
 
     //spring
     alias(libs.plugins.spring.boot) apply false

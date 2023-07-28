@@ -3,9 +3,9 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.openapitools.generator.gradle.plugin.tasks.GenerateTask
 
 plugins {
-    id("org.anasoid.jmeter.cloud.kotlin-library-conventions")
-    id("org.anasoid.jmeter.cloud.kotlin-openapi-generated-conventions")
-    id("org.anasoid.jmeter.cloud.kotlin-boot-conventions")
+    id("convention.kotlin.library")
+    id("convention.openapi.generate")
+    id("convention.kotlin.boot")
     alias(libs.plugins.openapi.generaor)
 
 

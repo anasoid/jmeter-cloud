@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.spring.boot)
     alias(libs.plugins.spring.dependency)
     kotlin("plugin.spring") version libs.versions.kotlin.get()
-    id("org.anasoid.jmeter.cloud.kotlin-boot-conventions")
+    id("convention.kotlin.boot")
 }
 
 
