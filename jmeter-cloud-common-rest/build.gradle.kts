@@ -9,9 +9,9 @@ plugins {
     id("org.anasoid.jmeter.cloud.kotlin-boot-conventions")
 
     //spring
-    id("org.springframework.boot") version "3.1.1" apply false
-    id("io.spring.dependency-management") version "1.1.0"
-    kotlin("plugin.spring") version "1.8.22"
+    alias(libs.plugins.spring.boot) apply false
+    alias(libs.plugins.spring.dependency)
+    kotlin("plugin.spring") version libs.versions.kotlin.get()
 }
 
 apply(plugin = "convention.detekt-config")
