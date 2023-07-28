@@ -60,9 +60,6 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Update Dependencies with Gradle
-        run: ./gradlew --stacktrace --console=verbose dependencyUpdates -Drevision=release -DoutputFormatter=plain,html
-
       - name: Build with Gradle
         run: ./gradlew --stacktrace --console=verbose -x test build
 
