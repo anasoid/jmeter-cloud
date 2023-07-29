@@ -73,7 +73,7 @@ jobs:
         if:   always()
         with:
           report_paths: '**/build/test-results/test/TEST-*.xml'
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+
 
       - name: Publish artifact Test Report
         uses: actions/upload-artifact@v3
