@@ -32,3 +32,4 @@ include(
     "jmeter-cloud-utilities"
 )
 
+include("code-coverage-report")
