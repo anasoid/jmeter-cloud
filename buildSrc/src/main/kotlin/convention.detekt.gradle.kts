@@ -11,13 +11,7 @@ dependencies {
 detekt {
     config.from(rootDir.resolve("gradle/detekt/detekt.yml"))
     buildUponDefaultConfig = true
-
 }
-
-
-
-
-
 
 tasks {
     if (project == rootProject) {

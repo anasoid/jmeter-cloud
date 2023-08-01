@@ -3,9 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.jvm")
 }
 
-
 dependencies {
-
 
     val kotlinxCoroutinesVersion = "1.6.1"
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxCoroutinesVersion")
@@ -20,5 +18,4 @@ dependencies {
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("jakarta.validation:jakarta.validation-api")
-
 }
