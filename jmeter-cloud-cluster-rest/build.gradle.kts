@@ -12,7 +12,6 @@ plugins {
     alias(libs.plugins.spring.boot) apply false
     alias(libs.plugins.spring.dependency)
     kotlin("plugin.spring") version libs.versions.kotlin.get()
-
 }
 
 apply(plugin = "convention.detekt-config")
@@ -28,21 +27,11 @@ sourceSets.named("main") {
     java.srcDir("$buildDir/gensrc/src/main/kotlin")
 }
 
-
-
 dependencies {
     api(project(":jmeter-cloud-core"))
     api(project(":jmeter-cloud-api"))
     api(project(":jmeter-cloud-common-rest"))
-
-
-
-
 }
-
-
-
-
 
 tasks.register<GenerateTask>("openApiGenerateApiCluster") {
     description = "open api generate cluster"
@@ -60,13 +49,8 @@ tasks.register<GenerateTask>("openApiGenerateApiCluster") {
             "useSpringBoot3" to "true",
         )
     )
-
 }
-
 
 tasks.withType<KotlinCompile>().configureEach {
     dependsOn("openApiGenerateApiCluster")
 }
-
-
-
