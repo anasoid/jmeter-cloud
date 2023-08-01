@@ -24,7 +24,6 @@ plugins {
 rootProject.name = "jmeter-cloud"
 include(
     "jmeter-cloud-app",
-    "jmeter-cloud-api",
     "jmeter-cloud-cluster-rest",
     "jmeter-cloud-api-rest",
     "jmeter-cloud-core",

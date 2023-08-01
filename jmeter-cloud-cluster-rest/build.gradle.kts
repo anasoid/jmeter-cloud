@@ -26,7 +26,6 @@ sourceSets.named("main") {
 
 dependencies {
     api(project(":jmeter-cloud-core"))
-    api(project(":jmeter-cloud-api"))
     api(project(":jmeter-cloud-common-rest"))
 }
 
@@ -35,6 +34,6 @@ val registerGenerateApi: (String, String, String, String) -> Unit by extra
 registerGenerateApi(
     "openApiGenerateApiCluster",
     "cluster",
-    "$rootDir/jmeter-cloud-api/src/main/resources/openapi/jmeter-cloud-cluster-0.1.0.yml",
+    "$rootDir/jmeter-cloud-cluster-rest/src/main/resources/openapi/jmeter-cloud-cluster-0.1.0.yml",
     "org.anasoid.jmeter.cloud.cluster.rest.generated"
 )

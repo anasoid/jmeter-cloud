@@ -1,6 +1,4 @@
 import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.openapitools.generator.gradle.plugin.tasks.GenerateTask
 
 plugins {
     id("convention.kotlin.library")
@@ -28,7 +26,6 @@ sourceSets.named("main") {
 
 dependencies {
     api(project(":jmeter-cloud-core"))
-    api(project(":jmeter-cloud-api"))
     api(project(":jmeter-cloud-common-rest"))
 
     // Spring boot
@@ -39,7 +36,7 @@ val registerGenerateApi: (String, String, String, String) -> Unit by extra
 registerGenerateApi(
     "openApiGenerateApiApp",
     "client",
-    "$rootDir/jmeter-cloud-api/src/main/resources/openapi/jmeter-cloud-api-0.1.0.yml",
+    "$rootDir/jmeter-cloud-api-rest/src/main/resources/openapi/jmeter-cloud-api-0.1.0.yml",
     "org.anasoid.jmeter.cloud.api.rest.generated"
 )
 
