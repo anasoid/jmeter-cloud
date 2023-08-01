@@ -31,4 +31,4 @@ include(
     "jmeter-cloud-common:jmeter-cloud-utilities"
 )
 
-include("BuildUtils:code-coverage-report")
+include("buildUtils:code-coverage-report")
