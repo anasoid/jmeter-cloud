@@ -1,6 +1,10 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.openapitools.generator.gradle.plugin.tasks.GenerateTask
+
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
     id("org.jetbrains.kotlin.jvm")
+    id("org.openapi.generator")
 }
 
 dependencies {
@@ -19,3 +23,31 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("jakarta.validation:jakarta.validation-api")
 }
+
+/**
+ * register generate api
+ */
+val registerGenerateApi by extra(
+    fun(name: String, desc: String, input: String, pack: String) {
+        tasks.register<GenerateTask>(name) {
+            description = "open api generate " + desc
+            group = "generate openapi"
+            generatorName.set("kotlin-spring")
+            inputSpec.set(input)
+            outputDir.set("$buildDir/gensrc")
+            packageName.set(pack)
+            configOptions.set(
+                mapOf(
+                    "basePackage" to pack + ".app",
+                    "delegatePattern" to "true",
+                    "reactive" to "true",
+                    "useSpringBoot3" to "true",
+                )
+            )
+        }
+        tasks.withType<KotlinCompile>().configureEach {
+            dependsOn(name)
+        }
+    }
+)
+

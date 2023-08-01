@@ -6,6 +6,7 @@ plugins {
     // Support convention plugins written in Kotlin. Convention plugins are build scripts in 'src/main' that automatically become available as plugins in the main build.
     `kotlin-dsl`
 
+
 }
 
 repositories {
@@ -18,6 +19,6 @@ repositories {
 dependencies {
     implementation(libs.plugin.kotlin)
     implementation(libs.plugin.detekt)
-
+    implementation(libs.plugin.openapi.generator)
     implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
 }
