@@ -7,5 +7,5 @@ plugins {
 }
 
 dependencies {
-    api(project(":jmeter-cloud-utilities"))
+    api(project(":jmeter-cloud-common:jmeter-cloud-utilities"))
 }

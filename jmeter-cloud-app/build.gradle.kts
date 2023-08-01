@@ -23,9 +23,9 @@ apply(plugin = "convention.detekt-config")
 
 dependencies {
 
-    implementation(project(":jmeter-cloud-core"))
-    implementation(project(":jmeter-cloud-api-rest"))
-    implementation(project(":jmeter-cloud-cluster-rest"))
+    implementation(project(":jmeter-cloud-common:jmeter-cloud-core"))
+    implementation(project(":jmeter-cloud-api:jmeter-cloud-api-rest"))
+    implementation(project(":jmeter-cloud-cluster:jmeter-cloud-cluster-rest"))
 
     implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.springframework.boot:spring-boot-starter-webflux")

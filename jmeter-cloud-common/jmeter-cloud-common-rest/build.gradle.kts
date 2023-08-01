@@ -25,6 +25,6 @@ the<DependencyManagementExtension>().apply {
 
 
 dependencies {
-    api(project(":jmeter-cloud-utilities"))
+    api(project(":jmeter-cloud-common:jmeter-cloud-utilities"))
     implementation("jakarta.validation:jakarta.validation-api")
 }

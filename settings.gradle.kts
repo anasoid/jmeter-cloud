@@ -24,11 +24,11 @@ plugins {
 rootProject.name = "jmeter-cloud"
 include(
     "jmeter-cloud-app",
-    "jmeter-cloud-cluster-rest",
-    "jmeter-cloud-api-rest",
-    "jmeter-cloud-core",
-    "jmeter-cloud-common-rest",
-    "jmeter-cloud-utilities"
+    "jmeter-cloud-cluster:jmeter-cloud-cluster-rest",
+    "jmeter-cloud-api:jmeter-cloud-api-rest",
+    "jmeter-cloud-common:jmeter-cloud-core",
+    "jmeter-cloud-common:jmeter-cloud-common-rest",
+    "jmeter-cloud-common:jmeter-cloud-utilities"
 )
 
-include("code-coverage-report")
+include("BuildUtils:code-coverage-report")

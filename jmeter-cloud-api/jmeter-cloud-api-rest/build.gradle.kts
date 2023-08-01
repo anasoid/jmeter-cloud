@@ -25,8 +25,8 @@ sourceSets.named("main") {
 }
 
 dependencies {
-    api(project(":jmeter-cloud-core"))
-    api(project(":jmeter-cloud-common-rest"))
+    api(project(":jmeter-cloud-common:jmeter-cloud-core"))
+    api(project(":jmeter-cloud-common:jmeter-cloud-common-rest"))
 
     // Spring boot
 }
@@ -36,7 +36,7 @@ val registerGenerateApi: (String, String, String, String) -> Unit by extra
 registerGenerateApi(
     "openApiGenerateApiApp",
     "client",
-    "$rootDir/jmeter-cloud-api-rest/src/main/resources/openapi/jmeter-cloud-api-0.1.0.yml",
+    "$projectDir/src/main/resources/openapi/jmeter-cloud-api-0.1.0.yml",
     "org.anasoid.jmeter.cloud.api.rest.generated"
 )
 

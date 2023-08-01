@@ -21,12 +21,12 @@ repositories {
 }
 
 dependencies {
-    jacocoAggregation(project(":jmeter-cloud-api-rest"))
+    jacocoAggregation(project(":jmeter-cloud-api:jmeter-cloud-api-rest"))
     jacocoAggregation(project(":jmeter-cloud-app"))
-    jacocoAggregation(project(":jmeter-cloud-cluster-rest"))
-    jacocoAggregation(project(":jmeter-cloud-common-rest"))
-    jacocoAggregation(project(":jmeter-cloud-core"))
-    jacocoAggregation(project(":jmeter-cloud-utilities"))
+    jacocoAggregation(project(":jmeter-cloud-cluster:jmeter-cloud-cluster-rest"))
+    jacocoAggregation(project(":jmeter-cloud-common:jmeter-cloud-common-rest"))
+    jacocoAggregation(project(":jmeter-cloud-common:jmeter-cloud-core"))
+    jacocoAggregation(project(":jmeter-cloud-common:jmeter-cloud-utilities"))
 }
 
 reporting {
