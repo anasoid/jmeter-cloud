@@ -10,7 +10,7 @@ sonar {
         property("sonar.projectKey", "anasoid_jmeter-cloud")
         property("sonar.organization", "anasoid")
         property("sonar.host.url", "https://sonarcloud.io")
-        property("sonar.exclusions", "**/generated/**")
+        property("sonar.exclusions", "**/generated/**, **.gradle.kts")
         property(
             "sonar.coverage.jacoco.xmlReportPaths",
             "${rootDir}/buildUtils/code-coverage-report/build/reports/jacoco/testCodeCoverageReport/testCodeCoverageReport.xml"
