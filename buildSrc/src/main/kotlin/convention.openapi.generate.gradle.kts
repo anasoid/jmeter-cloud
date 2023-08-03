@@ -9,7 +9,7 @@ plugins {
 
 dependencies {
 
-    val kotlinxCoroutinesVersion = "1.6.1"
+    val kotlinxCoroutinesVersion = "1.7.3"
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxCoroutinesVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:$kotlinxCoroutinesVersion")
     implementation("jakarta.annotation:jakarta.annotation-api:2.1.0")
