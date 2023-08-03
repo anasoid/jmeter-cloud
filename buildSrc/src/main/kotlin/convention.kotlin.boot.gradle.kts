@@ -9,6 +9,11 @@ plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
 }
 
+repositories {
+    // Use Maven Central for resolving dependencies.
+    maven { url = uri("https://repo.spring.io/milestone") }
+}
+
 dependencies {
     // Spring boot
     implementation("org.springframework.boot:spring-boot-starter-security")
