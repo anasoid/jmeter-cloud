@@ -5,7 +5,7 @@ kotlin = "1.8.22"
 detektkotlin = "1.8.21"
 openapi = "6.6.0"
 spring-boot = "3.1.2"
-spring-dependency = "1.1.0"
+spring-dependency = "1.1.2"
 
 
 [libraries]
