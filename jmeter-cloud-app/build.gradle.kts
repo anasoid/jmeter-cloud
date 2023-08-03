@@ -1,6 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-
 plugins {
     alias(libs.plugins.spring.boot)
     alias(libs.plugins.spring.dependency)
@@ -15,9 +14,7 @@ java {
     sourceCompatibility = JavaVersion.VERSION_17
 }
 
-repositories {
-    mavenCentral()
-}
+
 
 apply(plugin = "convention.detekt-config")
 
