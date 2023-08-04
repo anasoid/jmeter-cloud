@@ -24,6 +24,8 @@ dependencies {
     implementation(project(":jmeter-cloud-api:jmeter-cloud-api-rest"))
     implementation(project(":jmeter-cloud-cluster:jmeter-cloud-cluster-rest"))
 
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
+    developmentOnly("org.springframework.boot:spring-boot-devtools")
     implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
