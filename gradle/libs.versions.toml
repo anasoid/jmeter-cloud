@@ -1,8 +1,8 @@
 [versions]
-detekt = "1.23.1"
+detekt = "1.23.4"
 sonar = "4.4.1.3373"
 kotlin = "1.9.21"
-detektkotlin = "1.9.0"
+detektkotlin = "1.9.21"
 openapi = "7.0.1"
 spring-boot = "3.1.4"
 spring-dependency = "1.1.3"
