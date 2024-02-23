@@ -1,5 +1,5 @@
 [versions]
-detekt = "1.23.4"
+detekt = "1.23.5"
 sonar = "4.4.1.3373"
 kotlin = "1.9.21"
 detektkotlin = "1.9.21"
