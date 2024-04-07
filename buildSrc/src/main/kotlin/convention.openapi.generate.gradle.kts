@@ -12,7 +12,7 @@ dependencies {
     val kotlinxCoroutinesVersion = "1.8.0"
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxCoroutinesVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:$kotlinxCoroutinesVersion")
-    implementation("jakarta.annotation:jakarta.annotation-api:2.1.1")
+    implementation("jakarta.annotation:jakarta.annotation-api:3.0.0")
     implementation("io.swagger.core.v3:swagger-annotations:2.2.21")
 
     // Spring swagger
