@@ -4,7 +4,7 @@ sonar = "5.0.0.4638"
 kotlin = "1.9.23"
 detektkotlin = "1.9.23"
 openapi = "7.5.0"
-spring-boot = "3.2.4"
+spring-boot = "3.2.5"
 spring-dependency = "1.1.4"
 
 
