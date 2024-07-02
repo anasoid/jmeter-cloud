@@ -3,7 +3,7 @@ detekt = "1.23.6"
 sonar = "5.0.0.4638"
 kotlin = "1.9.24"
 detektkotlin = "1.9.23"
-openapi = "7.6.0"
+openapi = "7.7.0"
 spring-boot = "3.3.1"
 spring-dependency = "1.1.5"
 
