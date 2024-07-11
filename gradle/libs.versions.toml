@@ -1,6 +1,6 @@
 [versions]
 detekt = "1.23.6"
-sonar = "5.0.0.4638"
+sonar = "5.1.0.4882"
 kotlin = "1.9.24"
 detektkotlin = "1.9.23"
 openapi = "7.7.0"
