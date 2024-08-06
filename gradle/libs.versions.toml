@@ -1,7 +1,7 @@
 [versions]
 detekt = "1.23.6"
 sonar = "5.1.0.4882"
-kotlin = "2.0.0"
+kotlin = "2.0.10"
 detektkotlin = "1.9.23"
 openapi = "7.7.0"
 spring-boot = "3.3.2"
