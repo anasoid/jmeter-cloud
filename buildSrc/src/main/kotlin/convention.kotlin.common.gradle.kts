@@ -22,7 +22,7 @@ dependencies {
     }
 
     // Use JUnit Jupiter for testing.
-    testImplementation("org.junit.jupiter:junit-jupiter:5.10.3")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.11.4")
 }
 
 tasks.named<Test>("test") {
