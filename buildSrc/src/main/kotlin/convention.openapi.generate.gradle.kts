@@ -13,7 +13,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxCoroutinesVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:$kotlinxCoroutinesVersion")
     implementation("jakarta.annotation:jakarta.annotation-api:3.0.0")
-    implementation("io.swagger.core.v3:swagger-annotations:2.2.28")
+    implementation("io.swagger.core.v3:swagger-annotations:2.2.29")
 
     // Spring swagger
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
